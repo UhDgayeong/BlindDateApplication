@@ -3,7 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/drawable/join_button.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/drawable/login_button.xml" value="0.33229166666666665" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/drawable/toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/font/custom_font_family.xml" value="0.30833333333333335" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/layout/activity_intro.xml" value="0.33" />
         <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/Kimgayeong/AndroidStudioProjects/BlindDate/app/src/main/res/layout/item_card.xml" value="0.33" />
       </map>
     </option>
