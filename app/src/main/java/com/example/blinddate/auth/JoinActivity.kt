@@ -6,15 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.blinddate.R
 
-class IntroActivity : AppCompatActivity() {
+class JoinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_intro)
+        setContentView(R.layout.activity_join)
 
-        val joinBtn : Button = findViewById(R.id.joinBtn)
-        joinBtn.setOnClickListener {
-            val intent = Intent(this, JoinActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
