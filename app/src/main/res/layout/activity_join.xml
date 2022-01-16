@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".auth.JoinActivity"
-    android:background="@drawable/auth_image">
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:hint="email"
+                android:hint="이메일"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -40,7 +40,7 @@
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:hint="pwd"
+                android:hint="비밀번호"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -53,7 +53,7 @@
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:hint="pwdCheck"
+                android:hint="비밀번호 확인"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -61,8 +61,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            app:counterMaxLength="10"
-            app:counterEnabled="true"
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -74,8 +72,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            app:counterMaxLength="10"
-            app:counterEnabled="true"
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -87,8 +83,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            app:counterMaxLength="10"
-            app:counterEnabled="true"
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -100,8 +94,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            app:counterMaxLength="10"
-            app:counterEnabled="true"
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -112,10 +104,13 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="86dp"
+            android:layout_height="60dp"
             android:layout_margin="10dp"
-            android:background="@color/mainColor"
-            android:text="회원가입" />
+            android:text="회원가입"
+            android:background="@drawable/join_button"
+            android:fontFamily="@font/nanumsquarer"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
