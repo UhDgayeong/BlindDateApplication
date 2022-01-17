@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "18415822559",
+    "project_id": "blinddateapp-2a264",
+    "storage_bucket": "blinddateapp-2a264.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18415822559:android:1a90b46705b4a568afeb6a",
+        "android_client_info": {
+          "package_name": "com.example.blinddate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18415822559-u65qm240aa191cc079bg5jrsjqml7c06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZBKnaeKE6N2W51LzlN7wyZ4mkRsjI4HM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18415822559-u65qm240aa191cc079bg5jrsjqml7c06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

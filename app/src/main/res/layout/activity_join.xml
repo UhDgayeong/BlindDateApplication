@@ -27,6 +27,7 @@
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailArea"
                 android:hint="이메일"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -40,6 +41,7 @@
             android:background="@color/white"
             android:layout_margin="10dp">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pwdArea"
                 android:hint="비밀번호"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -103,6 +105,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/joinBtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="10dp"
