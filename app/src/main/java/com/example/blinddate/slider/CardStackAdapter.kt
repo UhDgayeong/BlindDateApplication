@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.blinddate.R
+import com.example.blinddate.auth.UserDataModel
 
-class CardStackAdapter(val context : Context, val items : List<String>) : RecyclerView.Adapter<CardStackAdapter.ViewHolder>() {
+class CardStackAdapter(val context : Context, val items : List<UserDataModel>) : RecyclerView.Adapter<CardStackAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardStackAdapter.ViewHolder {
         val inflater = LayoutInflater.from(parent.context) // 아까 만들어 준 아이템 뷰를 넣어줌
         val view : View = inflater.inflate(R.layout.item_card, parent, false)
@@ -24,7 +25,7 @@ class CardStackAdapter(val context : Context, val items : List<String>) : Recycl
     }
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        fun binding(data : String) {
+        fun binding(data : UserDataModel) {
 
         }
     }
