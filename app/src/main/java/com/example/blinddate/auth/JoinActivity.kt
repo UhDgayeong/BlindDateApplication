@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.blinddate.MainActivity
@@ -60,6 +61,13 @@ class JoinActivity : AppCompatActivity() {
             val email = findViewById<TextInputEditText>(R.id.emailArea)
             val pwd = findViewById<TextInputEditText>(R.id.pwdArea)
 
+            // 이메일 칸 공백이 아닌지, 비밀번호와 비밀번호확인란 내용이 동일한지 등등 체크 기능 추가할 것
+            val emailCheck = email.text.toString()
+
+            if (emailCheck.isEmpty()) {
+                Toast.makeText(this, "비어있음", Toast.LENGTH_SHORT).show()
+            }
+
             gender = findViewById<TextInputEditText>(R.id.genderArea).text.toString()
             city = findViewById<TextInputEditText>(R.id.cityArea).text.toString()
             age = findViewById<TextInputEditText>(R.id.ageArea).text.toString()
@@ -79,8 +87,8 @@ class JoinActivity : AppCompatActivity() {
 
                         uploadImage(uid)
 
-//                        val intent = Intent(this, MainActivity::class.java)
-//                        startActivity(intent)
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
 
                     } else {
                         // If sign in fails, display a message to the user.
