@@ -1,10 +1,15 @@
 package com.example.blinddate.auth
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.blinddate.MainActivity
 import com.example.blinddate.R
 import com.example.blinddate.utils.FirebaseRef
@@ -13,6 +18,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
+import java.io.ByteArrayOutputStream
 
 class JoinActivity : AppCompatActivity() {
 
@@ -26,12 +34,26 @@ class JoinActivity : AppCompatActivity() {
     private var age = ""
     private var nickname = ""
 
+    lateinit var profileImage : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
 
+        profileImage = findViewById(R.id.imageArea)
+
         // Initialize Firebase Auth
         auth = Firebase.auth
+
+        val getAction = registerForActivityResult(
+            ActivityResultContracts.GetContent()
+        ) { uri ->
+            profileImage.setImageURI(uri)
+        }
+
+        profileImage.setOnClickListener {
+            getAction.launch("image/*")
+        }
 
         val joinBtn = findViewById<Button>(R.id.joinBtn)
         joinBtn.setOnClickListener {
@@ -55,6 +77,7 @@ class JoinActivity : AppCompatActivity() {
 
                         FirebaseRef.userInfoRef.child(uid).setValue(userModel)
 
+                        uploadImage(uid)
 
 //                        val intent = Intent(this, MainActivity::class.java)
 //                        startActivity(intent)
@@ -69,6 +92,29 @@ class JoinActivity : AppCompatActivity() {
                 }
         }
 
+    }
+
+    private fun uploadImage(uid : String) {
+
+        val storage = Firebase.storage
+        val storageRef = storage.reference.child(uid + ".png")
+
+
+        // Get the data from an ImageView as bytes
+        profileImage.isDrawingCacheEnabled = true
+        profileImage.buildDrawingCache()
+        val bitmap = (profileImage.drawable as BitmapDrawable).bitmap
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val data = baos.toByteArray()
+
+        var uploadTask = storageRef.putBytes(data)
+        uploadTask.addOnFailureListener {
+            // Handle unsuccessful uploads
+        }.addOnSuccessListener { taskSnapshot ->
+            // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
+            // ...
+        }
     }
 
 
