@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.ImageView
 import com.example.blinddate.auth.IntroActivity
 import com.example.blinddate.auth.UserDataModel
+import com.example.blinddate.setting.MyPageActivity
+import com.example.blinddate.setting.SettingActivity
 import com.example.blinddate.slider.CardStackAdapter
 import com.example.blinddate.utils.FirebaseRef
 import com.google.firebase.auth.ktx.auth
@@ -36,10 +38,8 @@ class MainActivity : AppCompatActivity() {
 
         val setting = findViewById<ImageView>(R.id.settingIcon)
         setting.setOnClickListener{
-            val auth = Firebase.auth
-            auth.signOut()
 
-            val intent = Intent(this, IntroActivity::class.java)
+            val intent = Intent(this, SettingActivity::class.java)
             startActivity(intent)
         }
 
